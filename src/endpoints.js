@@ -32,6 +32,21 @@ server.get('/diaSemana', (req, resp) => {
     }
 })
 
+server.post('/fatorial'), (req, resp) => {
+    try {
+        const numero = Number (req.query.numero);
+
+        resp.send({
+            numero: a
+        })
+        
+    }  catch (err) {
+        resp.status(404).send({
+            erro: err.message
+        })
+    }
+}
+
 server.post('/sequencia', (req, resp) => {
     try {
         const limite = req.body;
